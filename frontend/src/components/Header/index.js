@@ -1,9 +1,8 @@
-import './index.css'
 
 const Header = () => (
     <header className="header">
-        <p>About</p>
-        <p>Service</p>
+        <p className="tab">About</p>
+        <p className="tab">Service</p>
     </header>
 )
 
