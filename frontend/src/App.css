@@ -1,0 +1,155 @@
+*{
+  box-sizing: border-box;
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+}
+.bg-container{
+  background-image: url("./assets/background.jpg");
+  height:100vh;
+  padding:50px;
+}
+
+
+.main-box{
+  width:60%;
+  height:90%;
+}
+.heading{
+  font-size: 60px;
+}
+.description{
+  font-size: 18px;
+}
+.btn{
+  height:30px;
+  width:100px;
+  color:black;
+  background-color: #FFBD59;
+  outline: none;
+  border-radius: 5px;
+  border:none;
+}
+
+.cms-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.input-box{
+  margin-bottom: 10px;
+  font-family: 34px;
+  padding:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+.timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Central growing timeline bar */
+.timeline-line {
+  position: absolute;
+  background: linear-gradient(to bottom, #4CAF50 0%, #4CAF50 100%);
+  width: 4px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline item wrapper */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+.timeline-box {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+  max-width: 250px;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  animation: growDot 0.5s ease forwards;
+  animation-delay: calc(var(--i) * 0.5s);
+  opacity: 0;
+}
+
+@keyframes growDot {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* Vertical layout for small screens */
+@media (max-width: 768px) {
+  .timeline-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-item {
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    top: 1.2rem;
+    transform: translateY(-50%);
+  }
+}
